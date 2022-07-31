@@ -1,0 +1,308 @@
+/* ---------------gradient----------- */
+ 
+.gradient{ background: conic-gradient(at center top, rgb(17, 24, 39), rgb(243, 244, 246), rgb(17, 24, 39));
+}
+.over{
+	overflow-y: scroll;
+    height: 1000px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+/* ------------------slider----------------- */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.testimonials-section {
+  background-image: url(../public/images/bg2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slider__nav {
+  width: 12px;
+  height: 12px;
+  margin: 80px 12px;
+  border-radius: 0%;
+  z-index: 10;
+  outline: 6px solid #ccc;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.slider__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+  animation: check 0.4s linear forwards;
+}
+.slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+  left: 0%;
+}
+.slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+  left: -100%;
+}
+.slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+  left: -200%;
+}
+.slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+  left: -300%;
+}
+.slider__nav:checked:nth-of-type(5) ~ .slider__inner {
+  left: -400%;
+}
+.slider__inner {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 500%;
+  height: auto;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.slider__contents {
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.slider__caption {
+  font-size: 14px;
+  color: #111;
+  opacity: .5;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+.slider__txt {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Roboto';
+  line-height: 1.7;
+  color: #111;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  max-width: 750px;
+}
+quote {
+  font-family: 'Arial';
+  font-weight: bold;
+  font-size: 100px;
+  color: #ec2027;
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+
+@keyframes check {
+  50% {
+    outline-color: #333;
+    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #333;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+/* --------------cart------------------- */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	.heading{
+		width: 3%;
+	    position: relative;
+	    top: 60px;
+	    left: 90%;
+	    cursor: pointer;
+	}
+	.heading:before{
+		content: attr(data-count);
+	    color: white;
+	    position: absolute;
+	    right: 16px;
+	    font-size: 15px;
+	    text-align: center;
+	    top: -12px;
+	    width: 20px;
+	    height: 20px;
+	    background: red;
+	    border-radius: 50%;
+	    opacity: 0;
+	}
+	.heading.zero:before{
+		opacity: 1;
+	}
+		.section{
+		margin-top: 70px;
+			display: flex;
+			justify-content: space-around;
+		}
+	
+		.sec_img{
+			width: 300px;
+			height: 186px;
+		}
+	
+		.section .item .span{
+			position: absolute;
+		    top: 14px;
+		    left: 13px;
+		    background: red;
+		    width: 300px;
+		    height: 186px;
+		    display: none;
+		}
+	
+		.section .item:nth-child(1)>.span.active{
+			animation: first 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		.section .item:nth-child(2)>.span.active{
+			animation: second 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		.section .item:nth-child(3)>.span.active{
+			animation: third 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		.section .item:nth-child(4)>.span.active{
+			animation: four 0.5s ease-in;
+			z-index: 2;
+			display: block;
+
+		}
+		@keyframes first{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 1290px;
+			    top: -70px;
+			}
+		}
+		@keyframes second{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 948px;
+			    top: -70px;
+			}
+		}
+		@keyframes third{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 606px;
+			    top: -70px;
+			}
+		}
+		@keyframes four{
+			to{
+				width: 30px;
+			    height: 20px;
+			    left: 265px;
+			    top: -70px;
+			}
+		}
+
+		.select{
+			width: 60%;
+			height: 580px;
+			padding: 5%;
+			background: #222;
+			position: absolute;
+			top: -1000px;
+			left: 20%;
+			transition: 0.5s;
+			overflow-y: auto;
+			margin: auto;
+		}
+		.select.display{
+			top: 10px;
+		}
+		.select .item{
+			width: 100%;
+			height: 200px;
+			display: flex;
+			padding: 5px;
+			border: 1px solid white;
+			position: relative;
+			margin: 5px auto;
+		}
+		.select .item .sec_img{
+			width: 300px;
+			height: 100%;
+		}
+		.select .item .para{
+			padding: 35px;
+			color: white;
+		}
+		.select .item .head,
+		.select .item .cart_button{
+			position: absolute;
+			left: 45%;
+			top: 50%;
+			color: white;
+		}
+		.select .item .cart_button{
+			left: 60%;
+			top: 55%;
+		}
+		.select .item .span{
+			display: none;
+		}
